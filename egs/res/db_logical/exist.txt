@@ -1,0 +1,117 @@
+<div class="col-lg-3">
+							<div class="panel <?php if($gen == 1){echo "panel-primary";}else{echo "panel-danger";}?>">
+								<div class="panel-body">
+									<ul class="nav nav-pills nav-stacked" role="tablist">
+									 	
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="tab-content">
+							<?php 
+								if($schoolInfo->num_rows() == 0){
+							?>
+								<div class="alert alert-danger text-center">No School Information Found</div>
+							<?php 	
+								}		 	
+							?>
+							
+							 <?php 
+								if($schoolInfo->num_rows() > 0){
+							 		foreach($schoolInfo->result() as $si):
+								 		$siStudNo = $si->STUDENT_NO;
+								 		$siSVID = $si->SV_ID;
+							?>
+								<div class="tab-pane <?php if(MY_Controller::get_instance()->getCurrentSem() == $siSVID){echo "active"; }?>" id="a<?php echo $siSVID; ?>">
+									<?php 
+										if(MY_Controller::get_instance()->getCurrentSem() == $siSVID){
+									?>
+										<?php 
+										$si = array(
+											'name'	=>	'si',
+											'id'		=>	'si'
+										);
+										echo form_open('enrolmentScript/addSchoolInfo', $si); 
+										
+										$yl = array(
+											''	=>	'Select Year Level',
+											'1'	=> 'First Year',
+											'2'	=>	'Second Year',
+											'3'	=>	'Third Year',
+											'4'	=>	'Fourth Year',
+											'5'	=>	'Fifth Year'
+										);
+
+										$status = array(
+											''	=>	'Select Status',
+											'New Student'	=>	'New Student',
+											'Regular Student'		=>	'Regular Student',
+											'Irreguar Student'	=> 'Irregular Student',
+											'Returnee Student'	=>	'Returnee Student',
+											'Shiftee Student'	=>	'Shiftee Student',
+											'Graduating Student'	=> 'Graduating Student'
+										);
+
+										$siBtn = array(
+											'name'	=>	'siBtn',
+											'id'	=>	'siBtn',
+											'class'	=>	'btn btn-primary',
+											'value'	=>	'Enrol'
+										);
+										
+										?>
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<?php echo form_label('Campus'); ?>
+													<?php echo form_dropdown('camp', array('' => 'Select Campus'), '', 'id="camp" class="form-control"'); ?>
+												</div>
+											</div>
+											<div class="col-lg-12">
+												<div class="form-group">
+													<?php echo form_label('College'); ?>
+													<?php echo form_dropdown('col', array('' => 'Select College'), '', 'id="col" class="form-control"'); ?>
+												</div>
+											</div>
+											<div class="col-lg-12">
+												<div class="form-group">
+													<?php echo form_label('Course'); ?>
+													<?php echo form_dropdown('course', array('' => 'Select Course'), '', 'id="course" class="form-control"'); ?>
+												</div>
+											</div>
+											<div class="col-lg-12">
+												<div class="form-group">
+													<?php echo form_label('Major'); ?>
+													<?php echo form_dropdown('major', array('' => 'Select Major'), '', 'id="major" class="form-control"'); ?>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<?php echo form_label('Year Level'); ?>
+													<?php echo form_dropdown('yl', $yl, '', 'id="yl" class="form-control"'); ?>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<?php echo form_label('Status'); ?>
+													<?php echo form_dropdown('status', $status, '', 'id="status" class="form-control"'); ?>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<?php echo form_submit($siBtn); ?>
+												</div>
+											</div>
+										</div>
+										<?php echo form_close(); ?>
+									<?php 
+										}
+									?>
+								</div>
+							<?php 
+								 	endforeach;
+								 }
+							 ?>
+							</div>
+						</div>

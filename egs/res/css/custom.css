@@ -1,0 +1,153 @@
+.no-bottom-margin{
+	margin-bottom:0px !important;  
+}
+
+.no-top-margin{
+	margin-top:0px !important;  
+}
+
+.text-up{
+    text-transform: uppercase !important;
+}
+
+.bg-gray{
+	background-color: #f1f0ea !important;
+    border-color: #bdbab3 !important; 
+}
+
+.text-lower-lvl-1{
+	font-size:11px !important; 
+}
+
+.no-border-radius{
+	border-radius:0px !important; 
+}
+
+.custom-h1{
+	font-size:35px !important; 
+}
+
+.custom-p1-jumbotron{
+	font-size:15px !important; 
+}
+
+.top-padding-15{
+	padding-top:15px !important; 
+}
+
+.bottom-padding-15{
+	padding-bottom:15px !important; 
+}
+
+.no-margin{
+	margin:0 !important; 
+}
+
+.no-padding{
+	padding:0 !important; 
+}
+
+.text-printable{
+	font-size:8pt !important; 
+}
+
+.text-printable-small{
+	font-size:7pt !important; 
+}
+
+.print-label {
+    width: 135px !important;
+    float: left !important;
+    text-align: right !important;
+}
+
+.border-top-thick{
+	border-top:3px solid #000 !important;
+}
+
+.col-left {
+    width: 50% !important;
+    float: left !important;
+    text-align: center !important;
+    border-top: 1px solid #000 !important;
+    margin-top: 10px !important;
+}
+
+.col-right {
+    width: 50% !important;
+    float: left !important;
+    text-align: center !important;
+    border-top: 1px solid #000 !important;
+    margin-top: 10px !important;
+}
+
+.major-indent {
+    margin-left: 60px !important;
+}
+
+.text-indent{
+	text-indent:10px !important; 
+}
+
+#text-f11 tr td{
+	font-size:11pt !important; 
+}
+
+#text-f12 tr td{
+	font-size:12pt !important; 
+}
+#text-f10 tr td{
+	font-size:10pt !important; 
+}
+#text-f9 tr td{
+	font-size:9pt !important; 
+}
+#text-f8 tr td{
+	font-size:8pt !important; 
+}
+
+#text-f7 tr td{
+	font-size:7pt !important; 
+}
+
+#text-f6 tr td{
+	font-size:6pt !important; 
+}
+
+.border-bottom{
+	border-bottom:1px solid #0e0e0e;
+}
+
+.padding-right{
+	padding-right:20px !important; 
+}
+
+.text-middle{
+	vertical-align:middle !important; 
+}
+
+.my-table1, .my-table{
+	float:left !important; 
+}
+
+.margin-bottom-10{
+	margin-bottom:10px !important; 
+}
+
+.my-table1 tr td{
+	border:1px solid #ddd;
+}
+
+.no-href{
+	cursor:pointer !important;
+	color:#777;
+}
+
+.no-href:hover{
+	text-decoration:none; 
+	color:#777;
+}
+
+.no-text-color{
+	color:#777 !important; 
+}
